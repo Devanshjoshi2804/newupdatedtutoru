@@ -1,0 +1,15 @@
+/* src/components/Testimonials.css */
+.testimonials {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .testimonials .testimonial {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .testimonials .testimonial p {
+    margin: 0;
+  }
+  

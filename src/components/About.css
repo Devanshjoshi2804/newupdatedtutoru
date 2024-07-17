@@ -1,0 +1,25 @@
+/* src/components/About.css */
+.about {
+    padding: 50px 0;
+  }
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-content img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+  }
+  .about-text {
+    max-width: 50%;
+  }
+  .about-text h2 {
+    margin-bottom: 20px;
+  }
+  .about-text p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  

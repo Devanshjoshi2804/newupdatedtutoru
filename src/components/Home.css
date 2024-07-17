@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* Set the background color to white */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+/* Home Container */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* Set the background color to white */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.home h1 {
+  margin-bottom: 20px;
+}
+
+.home button {
+  font-size: 1.2em;
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #3f51b5;
+  padding: 10px 0;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Form Section */
+.search-tutor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.form-control {
+  width: 180px; /* Adjust as needed for the desired width */
+  height: 56px; /* Match the height of MUI Button */
+  padding: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #3f51b5; /* Match the button color */
+  color: #fff; /* Text color for dropdown */
+}
+
+.form-control:focus {
+  border-color: #3f51b5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+}
+
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #3f51b5;
+  color: #fff; /* Text color for dropdown */
+}
+
+/* Highlighted Text */
+.highlighted-text {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Logo Section */
+.logo-section {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+}
+
+.logo {
+  max-width: 200px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px;
+  }
+
+  .search-tutor {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-control {
+    width: 100%;
+    margin-bottom: 1rem; /* Add margin between dropdowns */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav ul li {
+    margin: 10px 0;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .hero-content {
+    padding: 5px;
+  }
+
+  .form-control {
+    font-size: 0.9em;
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
