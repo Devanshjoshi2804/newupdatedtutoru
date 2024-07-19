@@ -1,44 +1,52 @@
-// src/components/Contact.js
 import React from 'react';
-import Container from '@mui/material/Container';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import { TextField, Button } from '@mui/material';
 import './Contact.css';
 
 function Contact() {
   return (
-    <Container maxWidth="lg" className="contact">
-      <Typography variant="h4" component="h2" gutterBottom>
-        Contact Us
-      </Typography>
-      <Box component="form" noValidate autoComplete="off" sx={{ mt: 3 }}>
+    <div className="contact-container">
+      <h1>Contact Us</h1>
+      <form className="contact-form">
         <TextField
-          fullWidth
           label="Name"
           variant="outlined"
+          fullWidth
           margin="normal"
+          required
         />
         <TextField
-          fullWidth
           label="Email"
           variant="outlined"
+          fullWidth
           margin="normal"
+          required
         />
         <TextField
+          label="Phone"
+          variant="outlined"
           fullWidth
+          margin="normal"
+          required
+        />
+        <TextField
           label="Message"
           variant="outlined"
+          fullWidth
           margin="normal"
           multiline
           rows={4}
+          required
         />
-        <Button variant="contained" color="primary" size="large" sx={{ mt: 2 }}>
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          className="submit-button"
+        >
           Send Message
         </Button>
-      </Box>
-    </Container>
+      </form>
+    </div>
   );
 }
 

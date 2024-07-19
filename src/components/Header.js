@@ -1,18 +1,19 @@
-// src/components/Header.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './Header.css';
-import './FindTutor.js';
 
 function Header() {
   return (
     <header className="header">
       <div className="header-content">
         <div className="contact-info">
-          <span>Phone: 9892100528</span>
-          <span>Email: support@tutoru.in</span>
+          <a href="tel:+919892100528" className="contact-link">
+            Phone: 9892100528
+          </a>
+          <a href="mailto:support@tutoru.in" className="contact-link">
+            Email: support@tutoru.in
+          </a>
         </div>
         <nav className="main-nav">
           <ul>

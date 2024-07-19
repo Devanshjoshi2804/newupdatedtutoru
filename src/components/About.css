@@ -1,25 +1,32 @@
-/* src/components/About.css */
 .about {
-    padding: 50px 0;
-  }
-  .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .about-content img {
-    max-width: 50%;
-    height: auto;
-    margin-right: 20px;
-  }
-  .about-text {
-    max-width: 50%;
-  }
-  .about-text h2 {
-    margin-bottom: 20px;
-  }
-  .about-text p {
-    font-size: 1.2em;
-    color: #555;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-header {
+  margin-bottom: 2rem;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #3f51b5;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  max-width: 800px;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}

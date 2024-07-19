@@ -1,29 +1,17 @@
-/* src/components/Header.css */
-
+/* Common Styles for Both Views */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #3f51b5;
+  background-color: #1596ff;
   color: white;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+.contact-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.contact-info {
-  display: flex;
-  gap: 20px;
-}
-
-.header-buttons {
-  display: flex;
-  gap: 10px;
+.contact-link:hover {
+  color: #ffeb3b;
 }
 
 .header-buttons .MuiButton-containedPrimary {
@@ -34,4 +22,108 @@
 .header-buttons .MuiButton-outlinedPrimary {
   border-color: #ffeb3b;
   color: #ffeb3b;
+}
+
+/* Laptop View */
+@media (min-width: 413px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .main-nav a:hover {
+    color: #ffeb3b;
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+/* Mobile View for 412 x 915 */
+@media (max-width: 412px) and (max-height: 915px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact-link {
+    font-size: 0.9em;
+  }
+
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-buttons button {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: color 0.3s;
+  }
 }
