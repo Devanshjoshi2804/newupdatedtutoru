@@ -62,26 +62,26 @@ function Home() {
   return (
     <Container maxWidth="lg" className="home">
       <Box className="logo-section">
-        <img src={logo} alt="TutorU Logo" className="logo" />
+        <img src={logo} alt="TutorU Logo" className="logo animate-logo" />
       </Box>
       <Box className="hero">
-        <img src={heroImage} alt="Hero" className="hero-image" />
-        <div className="hero-content">
+        <img src={heroImage} alt="Hero" className="hero-image animate-hero-image" />
+        <div className="hero-content animate-hero-content">
           <Typography variant="h3" component="h1" gutterBottom>
-            Welcome to tutorU
+            Welcome to TutorU
           </Typography>
           <Typography variant="h6" component="p" gutterBottom>
             Find the Best Verified Home Tutor for Your Child in Navi Mumbai.
           </Typography>
           <Typography variant="body1" component="p" gutterBottom>
             <span style={highlightedTextStyle}>
-              At TutorU, we provide the best private and home tutors across Navi Mumbai for all subjects from Class 1 to 12, including CBSE, ICSE, IB, IGCSE, and State Board, along with various entrance tests. We bring personalized one-on-one learning solutions to your home.
+              At TutorU, we offer personalized one-to-one home tutoring with the best tutors for all subjects from Grade 1 to 12, including CBSE, ICSE, IB, IGCSE, and State Board, as well as entrance test preparation, across Navi Mumbai.
             </span>
           </Typography>
         </div>
         <Box sx={searchStyle}>
           <select name="board" id="board" className="form-control" value={selectedBoard} onChange={handleBoardChange}>
-            <option value="">Select Board</option>
+            <option value="">Board</option>
             {boards.map((board) => (
               <option key={board} value={board}>
                 {board}
@@ -89,7 +89,7 @@ function Home() {
             ))}
           </select>
           <select name="grade" id="grade" className="form-control" value={selectedGrade} onChange={handleGradeChange} disabled={!selectedBoard}>
-            <option value="">Select Grade</option>
+            <option value="">Grade</option>
             {grades.map((grade) => (
               <option key={grade} value={grade}>
                 {grade}
@@ -97,7 +97,7 @@ function Home() {
             ))}
           </select>
           <select name="subject" id="subject" className="form-control" value={selectedSubject} onChange={handleSubjectChange} disabled={!selectedGrade}>
-            <option value="">Select Subject</option>
+            <option value="">Subject</option>
             {subjects.map((subject) => (
               <option key={subject} value={subject}>
                 {subject}
@@ -109,7 +109,7 @@ function Home() {
             color="primary"
             size="large"
             onClick={toggleForm}
-            className="form-control"
+            className="form-control animate-button"
             disabled={!selectedSubject}
           >
             Find Tutor
@@ -123,6 +123,61 @@ function Home() {
         selectedGrade={selectedGrade} 
         selectedSubject={selectedSubject} 
       />
+      {/* Infinite Moving Text Section */}
+      <div className="moving-text-section">
+        <div className="moving-text">
+          <p>Learn from the best tutors in the comfort of your home!</p>
+          <p>Personalized 1-on-1 tutoring sessions available now!</p>
+          <p>Boost your grades with our expert tutors!</p>
+          <p>Achieve academic excellence with TutorU!</p>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="testimonials-section">
+        <h2>Testimonials</h2>
+        <div className="testimonials">
+          <div className="testimonial">
+            <p>"TutorU has transformed my learning experience. My grades have improved significantly!"</p>
+            <span>- Student A</span>
+          </div>
+          <div className="testimonial">
+            <p>"The tutors are very knowledgeable and patient. My child loves the sessions!"</p>
+            <span>- Parent B</span>
+          </div>
+          <div className="testimonial">
+            <p>"Highly recommend TutorU for their excellent tutoring services!"</p>
+            <span>- Student C</span>
+          </div>
+          <div className="testimonial">
+            <p>"Great experience with TutorU. The tutors are professional and helpful."</p>
+            <span>- Parent D</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Core Benefits Section */}
+<div className="core-benefits-section mt-16">
+  <h2 className="section-title">Core Benefits</h2>
+  <div className="benefits-container">
+    <div className="benefit">
+      <h3>Handpicked Expert Tutors</h3>
+      <p>We carefully select experienced and knowledgeable tutors through a thorough hiring process to ensure top-notch, personalized education at your doorstep.</p>
+    </div>
+    <div className="benefit">
+      <h3>Dedicated Mentors</h3>
+      <p>We assign personal mentors to track progress and keep parents updated throughout the year.</p>
+    </div>
+    <div className="benefit">
+      <h3>Focused Assessments</h3>
+      <p>We conduct frequent assessments to enhance strengths and target areas for improvement.</p>
+    </div>
+    <div className="benefit">
+      <h3>Study Material</h3>
+      <p>We provide expert-designed resources for effective and engaging home learning.</p>
+    </div>
+  </div>
+</div>
       <Footer />
     </Container>
   );

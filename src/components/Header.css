@@ -1,7 +1,9 @@
 /* Common Styles for Both Views */
 .header {
+  position: sticky;
   background-color: #1596ff;
   color: white;
+  position: relative;
 }
 
 .contact-link {
@@ -46,12 +48,33 @@
     gap: 20px;
   }
 
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Shift the buttons to the right */
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
   .main-nav ul {
     display: flex;
+    flex-direction: row;
     gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-nav a {
@@ -64,14 +87,18 @@
     color: #ffeb3b;
   }
 
-  .header-buttons {
+  .menu-icon {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
   }
 }
 
-/* Mobile View for 412 x 915 */
-@media (max-width: 412px) and (max-height: 915px) {
+/* Mobile View */
+@media (max-width: 412px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -109,6 +136,17 @@
     padding: 5px;
   }
 
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
   .main-nav ul {
     display: flex;
     flex-direction: column;
@@ -125,5 +163,14 @@
     text-decoration: none;
     font-size: 0.8em;
     transition: color 0.3s;
+  }
+
+  .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
   }
 }
