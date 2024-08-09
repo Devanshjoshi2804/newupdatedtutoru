@@ -33,16 +33,17 @@ function PopupForm({ open, handleClose, selectedBoard, selectedGrade, selectedSu
 
       console.log('Submitting data:', dataToSubmit);
 
-      const csrfToken = Cookies.get('csrftoken');  // Get the CSRF token from cookies
+      const csrfToken = Cookies.get('csrftoken');  // Fetch the CSRF token from cookies
+      console.log('CSRF Token:', csrfToken);
 
       const response = await axios.post(
-        'https://admin.tutoru.in/myapp/api/tutor-request/',
+        'https://admin.tutoru.in/myapp/api/tutor-request/', // Ensure this URL is correct
         dataToSubmit,
-        { 
-          headers: { 
+        {
+          headers: {
             'Content-Type': 'application/json',
             'X-CSRFToken': csrfToken,  // Include the CSRF token in the headers
-          } 
+          },
         }
       );
 
