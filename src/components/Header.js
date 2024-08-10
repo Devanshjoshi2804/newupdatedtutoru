@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -7,10 +7,28 @@ import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="header">
@@ -23,6 +41,9 @@ function Header() {
             Email: support@tutoru.in
           </a>
         </div>
+        <div className="menu-icon" onClick={toggleMenu}>
+          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+        </div>
         <div className="header-buttons">
           <Button component={Link} to="/find-tutor" variant="contained" color="primary">
             Find a Tutor
@@ -31,12 +52,9 @@ function Header() {
             Contact Us
           </Button>
         </div>
-        <div className="menu-icon" onClick={toggleMenu}>
-          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-        </div>
       </div>
-      <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
-        <ul>
+      <nav ref={menuRef} className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
+        <ul onClick={toggleMenu}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
