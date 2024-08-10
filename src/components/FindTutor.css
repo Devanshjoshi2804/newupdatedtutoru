@@ -1,88 +1,173 @@
-/* General Styles */
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e0f7fa);
+  overflow-x: hidden;
+}
+
+.find-tutor {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #e1f5fe, #e0f4ff);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Container */
-  .find-tutor {
-    padding: 2rem 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Content */
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.image-section {
+  flex: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-section {
+  flex: 1;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.form-section p {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  height: 56px;
+  padding: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.form-control:focus {
+  border-color: #3f51b5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+}
+
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #007bff  no-repeat right 10px center;
+  color: #fff;
+  padding-right: 2.5rem;
+}
+
+.form-control::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #007bff, #1596ff);
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(21, 150, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(21, 150, 255, 0.4);
+}
+
+@media (max-width: 768px) {
   .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  /* Image Section */
-  .image-section {
-    flex: 1;
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* Form Section */
-  .form-section {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .form-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 1rem;
-  }
-  
-  .form-section p {
-    font-size: 1.2em;
-    margin-bottom: 2rem;
-  }
-  
-  .form-container {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
-  
-  .form-control {
-    width: 100%;
-    height: 56px;
-    padding: 0 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #3f51b5;
-    color: #fff;
-  }
-  
-  .form-control:focus {
-    border-color: #3f51b5;
-    outline: none;
-    box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
-  }
-  
-  select.form-control {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: #3f51b5;
-    color: #fff;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-    }
-  
-    .form-section {
-      text-align: center;
-    }
-  }
-  
+}
