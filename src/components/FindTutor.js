@@ -1,14 +1,39 @@
-// src/components/FindTutor.js
-
-import React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import React, { useState } from 'react';
+import { Box, Button, Container } from '@mui/material';
+import PopupForm from './PopupForm';
 import heroImage from '../assets/hero-image.png';
+import tutorData from '../data/tutorData';
 import './FindTutor.css';
 
-function FindTutor() {
+const FindTutor = () => {
+  const [formOpen, setFormOpen] = useState(false);
+  const [selectedBoard, setSelectedBoard] = useState('');
+  const [selectedGrade, setSelectedGrade] = useState('');
+  const [selectedSubject, setSelectedSubject] = useState('');
+
+  const toggleForm = () => {
+    setFormOpen(!formOpen);
+  };
+
+  const handleBoardChange = (e) => {
+    setSelectedBoard(e.target.value);
+    setSelectedGrade('');
+    setSelectedSubject('');
+  };
+
+  const handleGradeChange = (e) => {
+    setSelectedGrade(e.target.value);
+    setSelectedSubject('');
+  };
+
+  const handleSubjectChange = (e) => {
+    setSelectedSubject(e.target.value);
+  };
+
+  const boards = Object.keys(tutorData);
+  const grades = selectedBoard ? Object.keys(tutorData[selectedBoard]) : [];
+  const subjects = selectedBoard && selectedGrade ? tutorData[selectedBoard][selectedGrade] : [];
+
   return (
     <Container maxWidth="lg" className="find-tutor">
       <Box className="content">
@@ -16,44 +41,75 @@ function FindTutor() {
           <img src={heroImage} alt="Hero" className="hero-image" />
         </Box>
         <Box className="form-section">
-          <Typography variant="h3" component="h1" gutterBottom>
-            Find the Perfect Tutor for Your Child
-          </Typography>
-          <Typography variant="h6" component="p" gutterBottom>
-            Discover the best tutors tailored to your child's needs.
-          </Typography>
-          <Box className="form-container">
-            <select name="board" id="board" className="form-control">
-              <option value="">Select Board</option>
-              <option value="CBSE">CBSE</option>
-              <option value="ICSE">ICSE</option>
-              <option value="State Board">State Board</option>
+          <h1>Find Your Ideal Tutor</h1>
+          <p>Fill out the form below to match with the best tutor for your needs.</p>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
+            <select
+              name="board"
+              id="board"
+              className="form-control"
+              value={selectedBoard}
+              onChange={handleBoardChange}
+            >
+              <option value="">Board</option>
+              {boards.map((board) => (
+                <option key={board} value={board}>
+                  {board}
+                </option>
+              ))}
             </select>
-            <select name="grade" id="grade" className="form-control">
-              <option value="">Select Grade</option>
-              <option value="9">Grade 9</option>
-              <option value="10">Grade 10</option>
-              <option value="11">Grade 11</option>
-              <option value="12">Grade 12</option>
+            <select
+              name="grade"
+              id="grade"
+              className="form-control"
+              value={selectedGrade}
+              onChange={handleGradeChange}
+              disabled={!selectedBoard}
+            >
+              <option value="">Grade</option>
+              {grades.map((grade) => (
+                <option key={grade} value={grade}>
+                  {grade}
+                </option>
+              ))}
             </select>
-            <select name="subject" id="subject" className="form-control">
-              <option value="">Select Subject</option>
-              <option value="Math">Math</option>
-              <option value="Science">Science</option>
-              <option value="Physics">Physics</option>
-              <option value="Chemistry">Chemistry</option>
-              <option value="Biology">Biology</option>
-              <option value="JEE">JEE</option>
-              <option value="NEET">NEET</option>
+            <select
+              name="subject"
+              id="subject"
+              className="form-control"
+              value={selectedSubject}
+              onChange={handleSubjectChange}
+              disabled={!selectedGrade}
+            >
+              <option value="">Subject</option>
+              {subjects.map((subject) => (
+                <option key={subject} value={subject}>
+                  {subject}
+                </option>
+              ))}
             </select>
-            <Button variant="contained" color="primary" size="large" className="form-control">
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={toggleForm}
+              className="form-control animate-button"
+              disabled={!selectedSubject}
+            >
               Find Tutor
             </Button>
           </Box>
         </Box>
       </Box>
+      <PopupForm
+        open={formOpen}
+        handleClose={toggleForm}
+        selectedBoard={selectedBoard}
+        selectedGrade={selectedGrade}
+        selectedSubject={selectedSubject}
+      />
     </Container>
   );
-}
+};
 
 export default FindTutor;
