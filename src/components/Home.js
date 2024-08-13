@@ -22,9 +22,8 @@ function Home() {
     backgroundColor: '#1596ff',
     padding: '0.2rem',
     borderRadius: '0.2rem',
-    display: 'inline-block' // Ensures the box wraps around the text
+    display: 'inline-block', // Ensures the box wraps around the text
   };
-  
 
   const toggleForm = () => {
     setFormOpen(!formOpen);
@@ -54,9 +53,18 @@ function Home() {
       <Box className="logo-section animate-logo-slide-in">
         <img src={logo} alt="TutorU Logo" className="logo animate-logo-bounce" />
       </Box>
+
+      {/* Hero Section */}
       <Box className="hero animate-hero-fade-in">
-        <img src={heroImage} alt="Hero" className="hero-image animate-hero-slide-up" />
-        <div className="hero-content animate-hero-content text-center" style={{ marginTop: '-7rem' }}>
+        <img
+          src={heroImage}
+          alt="Hero"
+          className="hero-image absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-full h-auto"
+        />
+        <div
+          className="hero-content animate-hero-content text-center"
+          style={{ marginTop: '-7rem' }}
+        >
           <Typography variant="h3" component="h1" gutterBottom className="animate-text-pop-in">
             Welcome to tutorU
           </Typography>
@@ -65,13 +73,21 @@ function Home() {
           </Typography>
           <Typography variant="body1" component="p" gutterBottom>
             <span style={highlightedTextStyle}>
-              At TutorU, we offer personalized one-to-one home tutoring with the best tutors for all subjects from Grade 1 to 12, including CBSE, ICSE, IB, IGCSE, and State Board, as well as entrance test preparation, across Navi Mumbai.
+              At TutorU, we offer personalized one-to-one home tutoring with the best tutors for all
+              subjects from Grade 1 to 12, including CBSE, ICSE, IB, IGCSE, and State Board, as well
+              as entrance test preparation, across Navi Mumbai.
             </span>
           </Typography>
         </div>
-        <Box
-          className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-6 bg-white shadow-lg rounded mt-8 w-full max-w-md md:max-w-3xl mx-auto animate-form-slide-up"
-        >
+      </Box>
+
+      {/* Form Section */}
+      <Box className="form-section bg-white shadow-lg rounded mt-8 w-full max-w-md md:max-w-3xl mx-auto animate-form-slide-up p-4">
+        <div className="form-title text-center mb-4">
+          <Typography variant="h4" component="h2">
+          </Typography>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
           <select
             name="board"
             id="board"
@@ -126,15 +142,17 @@ function Home() {
           >
             Find Tutor
           </Button>
-        </Box>
+        </div>
       </Box>
-      <PopupForm 
-        open={formOpen} 
-        handleClose={toggleForm} 
-        selectedBoard={selectedBoard} 
-        selectedGrade={selectedGrade} 
-        selectedSubject={selectedSubject} 
+
+      <PopupForm
+        open={formOpen}
+        handleClose={toggleForm}
+        selectedBoard={selectedBoard}
+        selectedGrade={selectedGrade}
+        selectedSubject={selectedSubject}
       />
+
       {/* Infinite Moving Text Section */}
       <div className="moving-text-section animate-moving-text">
         <div className="moving-text">
@@ -144,36 +162,49 @@ function Home() {
           <p>Achieve academic excellence with tutorU!</p>
         </div>
       </div>
+
+      {/* Other Sections */}
       <div className="getting-started-section">
         <h2 className="section-title">Getting Started</h2>
         <div className="steps-container">
           <div className="step" data-step="1">
-            <div className="icon"><i className="fas fa-file-alt"></i></div>
+            <div className="icon">
+              <i className="fas fa-file-alt"></i>
+            </div>
             <h3>Fill Out the Form</h3>
             <p>Complete our easy online form to get started.</p>
           </div>
           <div className="step" data-step="2">
-            <div className="icon"><i className="fas fa-user-check"></i></div>
+            <div className="icon">
+              <i className="fas fa-user-check"></i>
+            </div>
             <h3>In-Person Assessment</h3>
             <p>Our mentors visit to evaluate your child and discuss their progress.</p>
           </div>
           <div className="step" data-step="3">
-            <div className="icon"><i className="fas fa-user-friends"></i></div>
+            <div className="icon">
+              <i className="fas fa-user-friends"></i>
+            </div>
             <h3>Perfect Match</h3>
             <p>We match your child with a tutor based on their specific needs and your preferences.</p>
           </div>
           <div className="step" data-step="4">
-            <div className="icon"><i className="fas fa-chalkboard-teacher"></i></div>
+            <div className="icon">
+              <i className="fas fa-chalkboard-teacher"></i>
+            </div>
             <h3>Demo Session</h3>
             <p>Experience a FREE trial session to ensure a good fit.</p>
           </div>
           <div className="step" data-step="5">
-            <div className="icon"><i className="fas fa-book-open"></i></div>
+            <div className="icon">
+              <i className="fas fa-book-open"></i>
+            </div>
             <h3>Start Learning</h3>
             <p>Begin regular sessions as soon as your child is comfortable with the tutor.</p>
           </div>
         </div>
       </div>
+
       {/* Testimonials Section */}
       <div className="testimonials-section animate-testimonials-fade-in">
         <h2 className="section-title">Testimonials</h2>
@@ -187,38 +218,35 @@ function Home() {
             <span>- Parent B</span>
           </div>
           <div className="testimonial hover:scale-105 transition-transform duration-300">
-            <p>"Highly recommend tutorU for their excellent tutoring services!"</p>
-            <span>- Student C</span>
-          </div>
-          <div className="testimonial hover:scale-105 transition-transform duration-300">
-            <p>"Great experience with TutorU. The tutors are professional and helpful."</p>
-            <span>- Parent D</span>
+            <p>"Highly recommend tutorU for anyone looking for quality home tutoring."</p>
+            <span>- Parent C</span>
           </div>
         </div>
       </div>
 
       {/* Core Benefits Section */}
-      <div className="core-benefits-section mt-16 animate-core-benefits-fade-in">
+      <div className="core-benefits-section animate-core-benefits-slide-in">
         <h2 className="section-title">Core Benefits</h2>
         <div className="benefits-container">
           <div className="benefit hover:scale-105 transition-transform duration-300">
-            <h3>Handpicked Expert Tutors</h3>
-            <p>We carefully select experienced and knowledgeable tutors through a thorough hiring process to ensure top-notch, personalized education at your doorstep.</p>
+            <h3>Personalized Learning</h3>
+            <p>We tailor our teaching methods to suit your child's learning style.</p>
           </div>
           <div className="benefit hover:scale-105 transition-transform duration-300">
-            <h3>Dedicated Mentors</h3>
-            <p>We assign personal mentors to track progress and keep parents updated throughout the year.</p>
+            <h3>Experienced Tutors</h3>
+            <p>All our tutors are highly qualified and experienced professionals.</p>
           </div>
           <div className="benefit hover:scale-105 transition-transform duration-300">
-            <h3>Focused Assessments</h3>
-            <p>We conduct frequent assessments to enhance strengths and target areas for improvement.</p>
+            <h3>Flexible Scheduling</h3>
+            <p>We work around your schedule to provide convenient learning sessions.</p>
           </div>
           <div className="benefit hover:scale-105 transition-transform duration-300">
-            <h3>Study Material</h3>
-            <p>We provide expert-designed resources for effective and engaging home learning.</p>
+            <h3>Proven Results</h3>
+            <p>Our students consistently achieve better academic outcomes.</p>
           </div>
         </div>
       </div>
+
       <Footer />
     </Container>
   );
