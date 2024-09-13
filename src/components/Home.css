@@ -1445,4 +1445,123 @@ max-width: 100%;
 /* Desktop View - Enhanced Form Section */
 /* Desktop View - Form Section Styling */
 /* Desktop View - Form Section Styling */
+.top-achievers-section {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-achievers-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1596ff;
+  font-family: 'Poppins', sans-serif;
+  animation: animate-text-pop-in 1s ease-out;
+}
+
+/* Container to hold the moving track */
+.achievers-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.achievers-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-left 30s linear infinite;
+}
+
+.achiever-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Adjust card width */
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.achiever-card:hover {
+  transform: scale(1.1);
+}
+
+.achiever-image {
+  width: 140px; /* Slightly larger image */
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achiever-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.achiever-info p {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Infinite scrolling keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-text-pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Adjusting the size of the student images */
+.achiever-image {
+  width: 150px; /* Increase the size */
+  height: 150px; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+  border-radius: 50%; /* Make the image circular */
+  border: 3px solid #1596ff; /* Add a border around the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.achiever-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.achiever-card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the achievers container */
+.achievers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
