@@ -9,6 +9,17 @@ import heroImage from '../assets/hero-image.png';
 import logo from '../assets/fj.png';
 import tutorData from '../data/tutorData';
 import './Home.css';
+import sanskritiImage from '../assets/class10cbse-1.jpg';
+import poojaImage from '../assets/class10cbse-2.jpg';
+import sohamImage from '../assets/class10cbse3.jpg';
+import anjaliImage from '../assets/class10cbse-4.jpg';
+import rohanImage from '../assets/class10cbse-5.jpg';
+import nehaImage from '../assets/cbseclass12-1.jpg';
+import amitImage from '../assets/cbseclass12-2.jpg';
+import shrutiImage from '../assets/cbseclass12-3.jpg';
+import vikramImage from '../assets/ICSEgrade10-1.jpg';
+import sanyaImage from '../assets/ICSEgrade10-2.jpg';
+import icseStudent3Image from '../assets/ICSEgrade10-3.jpg';
 
 function Home() {
   const [formOpen, setFormOpen] = useState(false);
@@ -204,6 +215,103 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* Top Achievers Section */}
+<div className="top-achievers-section">
+  <h2 className="section-title">Our Top Achievers</h2>
+  <div className="achievers-container">
+    {/* State Board Students */}
+    <div className="achiever-card">
+      <img src={sanskritiImage} alt="Sanskriti Shetty" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Sanskriti Shetty</h3>
+        <p>Class 10 CBSE  - 75%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={poojaImage} alt="Pooja Patel" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Vansh Saroha</h3>
+        <p>Class 10 CBSE - 90.40%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={sohamImage} alt="Soham Deshmukh" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Navya Srivastava</h3>
+        <p>Class 10 CBSE  - 95%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={anjaliImage} alt="Anjali Mehta" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Ramkrishna Pachalog</h3>
+        <p>Class 10 CBSE  - 93.20%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={rohanImage} alt="Rohan Verma" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Seemant Gupta</h3>
+        <p>Class 10 CBSE - 92%</p>
+      </div>
+    </div>
+
+    {/* CBSE Students */}
+    <div className="achiever-card">
+      <img src={nehaImage} alt="Neha Gupta" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Pranav Pandey</h3>
+        <p>Class 12 CBSE - 73%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={amitImage} alt="Amit Kumar" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Bhoomija Pandey</h3>
+        <p>Class 12 CBSE - 85%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={shrutiImage} alt="Shruti Singh" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Najim Siddiqui</h3>
+        <p>Class 12 CBSE - 95%</p>
+      </div>
+    </div>
+
+    {/* ICSE Students */}
+    <div className="achiever-card">
+      <img src={vikramImage} alt="Vikram Rathore" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Yug Agarwal</h3>
+        <p>Class 10 ICSE - 90%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={sanyaImage} alt="Sanya Kapoor" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Samridhi Pandey</h3>
+        <p>Class 10 ICSE - 91%</p>
+      </div>
+    </div>
+
+    <div className="achiever-card">
+      <img src={icseStudent3Image} alt="ICSE Student 3" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Abhisha Hemjith</h3>
+        <p>Class 10 ICSE - 93.17%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Testimonials Section */}
       <div className="testimonials-section animate-testimonials-fade-in">
