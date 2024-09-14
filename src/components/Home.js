@@ -221,13 +221,7 @@ function Home() {
   <h2 className="section-title">Scores in Subjects Taken with tutorU</h2>
   <div className="achievers-container">
     {/* State Board Students */}
-    <div className="achiever-card">
-      <img src={sanskritiImage} alt="Sanskriti Shetty" className="achiever-image" />
-      <div className="achiever-info">
-        <h3>Sanskriti Shetty</h3>
-        <p>Class 10 CBSE  - 75%</p>
-      </div>
-    </div>
+    
 
     <div className="achiever-card">
       <img src={poojaImage} alt="Pooja Patel" className="achiever-image" />
@@ -242,6 +236,14 @@ function Home() {
       <div className="achiever-info">
         <h3>Navya Srivastava</h3>
         <p>Class 10 CBSE  - 95%</p>
+      </div>
+    </div>
+  
+  <div className="achiever-card">
+      <img src={sanskritiImage} alt="Sanskriti Shetty" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Sanskriti Shetty</h3>
+        <p>Class 10 CBSE  - 75%</p>
       </div>
     </div>
 
