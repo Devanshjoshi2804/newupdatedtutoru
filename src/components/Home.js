@@ -239,6 +239,14 @@ function Home() {
       </div>
     </div>
   
+  
+    <div className="achiever-card">
+      <img src={anjaliImage} alt="Anjali Mehta" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Ramkrishna Pachalog</h3>
+        <p>Class 10 CBSE  - 93.20%</p>
+      </div>
+    </div>
   <div className="achiever-card">
       <img src={sanskritiImage} alt="Sanskriti Shetty" className="achiever-image" />
       <div className="achiever-info">
@@ -247,13 +255,6 @@ function Home() {
       </div>
     </div>
 
-    <div className="achiever-card">
-      <img src={anjaliImage} alt="Anjali Mehta" className="achiever-image" />
-      <div className="achiever-info">
-        <h3>Ramkrishna Pachalog</h3>
-        <p>Class 10 CBSE  - 93.20%</p>
-      </div>
-    </div>
 
     <div className="achiever-card">
       <img src={rohanImage} alt="Rohan Verma" className="achiever-image" />
