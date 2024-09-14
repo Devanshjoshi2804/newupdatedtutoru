@@ -20,6 +20,7 @@ import shrutiImage from '../assets/cbseclass12-3.jpg';
 import vikramImage from '../assets/ICSEgrade10-1.jpg';
 import sanyaImage from '../assets/ICSEgrade10-2.jpg';
 import icseStudent3Image from '../assets/ICSEgrade10-3.jpg';
+import icseStudent4Image from '../assets/ICSECLASS10.jpg';
 
 function Home() {
   const [formOpen, setFormOpen] = useState(false);
@@ -308,6 +309,9 @@ function Home() {
         <h3>Abhisha Hemjith</h3>
         <p>Class 10 ICSE - 93.17%</p>
       </div>
+    </div>
+      <div className="achiever-card">
+      <img src={icseStudent4Image} alt="ICSE Student 3" className="achiever-image" />
     </div>
   </div>
 </div>
