@@ -312,6 +312,10 @@ function Home() {
     </div>
       <div className="achiever-card">
       <img src={icseStudent4Image} alt="ICSE Student 3" className="achiever-image" />
+      <div className="achiever-info">
+        <h3>Ishita Pawar</h3>
+        <p>Class 10 ICSE - 85%</p>
+      </div>
     </div>
   </div>
 </div>
