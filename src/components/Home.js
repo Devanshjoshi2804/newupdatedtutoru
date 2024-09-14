@@ -218,7 +218,7 @@ function Home() {
       </div>
       {/* Top Achievers Section */}
 <div className="top-achievers-section">
-  <h2 className="section-title">Our Top Achievers</h2>
+  <h2 className="section-title">Scores in Subjects Taken with tutorU</h2>
   <div className="achievers-container">
     {/* State Board Students */}
     <div className="achiever-card">
