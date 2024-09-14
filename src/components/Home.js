@@ -218,110 +218,107 @@ function Home() {
       </div>
       {/* Top Achievers Section */}
 <div className="top-achievers-section">
-  <h2 className="section-title">Scores in Subjects Taken with tutorU</h2>
+  <h2 className="section-title">Scores in Subjects Taken with tutorU</h2>
+  
+  {/* State Board Students */}
+  <h2 className="section-title">Class 10 CBSE</h2>
   <div className="achievers-container">
-    {/* State Board Students */}
-    
-
     <div className="achiever-card">
       <img src={poojaImage} alt="Pooja Patel" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Vansh Saroha</h3>
-        <p>Class 10 CBSE - 90.40%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
     <div className="achiever-card">
       <img src={sohamImage} alt="Soham Deshmukh" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Navya Srivastava</h3>
-        <p>Class 10 CBSE  - 95%</p>
+        {/* Achiever Info */}
       </div>
     </div>
-  
-  
+
     <div className="achiever-card">
       <img src={anjaliImage} alt="Anjali Mehta" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Ramkrishna Pachalog</h3>
-        <p>Class 10 CBSE  - 93.20%</p>
+        {/* Achiever Info */}
       </div>
     </div>
-  <div className="achiever-card">
+
+    <div className="achiever-card">
       <img src={sanskritiImage} alt="Sanskriti Shetty" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Sanskriti Shetty</h3>
-        <p>Class 10 CBSE  - 75%</p>
+        {/* Achiever Info */}
       </div>
     </div>
+  </div>
 
-
+  {/* CBSE Students */}
+  <h2 className="section-title">Class 12 CBSE</h2>
+  <div className="achievers-container">
     <div className="achiever-card">
       <img src={rohanImage} alt="Rohan Verma" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Seemant Gupta</h3>
-        <p>Class 12 CBSE - 92%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
-    {/* CBSE Students */}
     <div className="achiever-card">
       <img src={nehaImage} alt="Neha Gupta" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Pranav Pandey</h3>
-        <p>Class 12 CBSE - 73%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
     <div className="achiever-card">
       <img src={amitImage} alt="Amit Kumar" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Bhoomija Pandey</h3>
-        <p>Class 12 CBSE - 85%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
     <div className="achiever-card">
       <img src={shrutiImage} alt="Shruti Singh" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Najim Siddiqui</h3>
-        <p>Class 12 CBSE - 95%</p>
+        {/* Achiever Info */}
       </div>
     </div>
+  </div>
 
-    {/* ICSE Students */}
+  
+
+  {/* ICSE Students */}
+  <h2 className="section-title">Class 10 ICSE</h2>
+  <div className="achievers-container">
     <div className="achiever-card">
       <img src={vikramImage} alt="Vikram Rathore" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Yug Agarwal</h3>
-        <p>Class 10 ICSE - 90%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
     <div className="achiever-card">
       <img src={sanyaImage} alt="Sanya Kapoor" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Samridhi Pandey</h3>
-        <p>Class 10 ICSE - 91%</p>
+        {/* Achiever Info */}
       </div>
     </div>
 
     <div className="achiever-card">
       <img src={icseStudent3Image} alt="ICSE Student 3" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Abhisha Hemjith</h3>
-        <p>Class 10 ICSE - 93.17%</p>
+        {/* Achiever Info */}
       </div>
     </div>
-      <div className="achiever-card">
-      <img src={icseStudent4Image} alt="ICSE Student 3" className="achiever-image" />
+
+    <div className="achiever-card">
+      <img src={icseStudent4Image} alt="ICSE Student 4" className="achiever-image" />
       <div className="achiever-info">
-        <h3>Ishita Pawar</h3>
-        <p>Class 10 ICSE - 85%</p>
+        {/* Achiever Info */}
       </div>
     </div>
   </div>
 </div>
+
 
 
       {/* Testimonials Section */}
