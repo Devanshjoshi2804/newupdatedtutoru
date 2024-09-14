@@ -341,7 +341,7 @@ footer {
     width: 150%;
     height: auto;
     border-radius: 0;
-    margin-top: 50px;
+    margin-top: -17rem;
   }
 
   .hero-content {
@@ -354,7 +354,7 @@ footer {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 1rem;
   }
 
   .hero h1 {
@@ -1265,7 +1265,7 @@ max-width: 100%;
   .hero-content h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin-top: -20rem;
+    margin-top: -23rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
@@ -1283,7 +1283,7 @@ max-width: 100%;
 
   /* Form Section */
   .form-section {
-    margin-top: -7rem;
+    margin-top: -9rem;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -1445,113 +1445,49 @@ max-width: 100%;
 /* Desktop View - Enhanced Form Section */
 /* Desktop View - Form Section Styling */
 /* Desktop View - Form Section Styling */
-.top-achievers-section {
-  margin-top: 5rem;
-  text-align: center;
-  background-color: #f5f5f5;
-  padding: 3rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
+/* Top Achievers Section */
 .top-achievers-section .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #1596ff;
-  font-family: 'Poppins', sans-serif;
-  animation: animate-text-pop-in 1s ease-out;
-}
-
-/* Container to hold the moving track */
-.achievers-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.achievers-track {
-  display: flex;
-  gap: 3rem;
-  animation: scroll-left 30s linear infinite;
-}
-
-.achiever-card {
-  background-color: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Adjust card width */
-  transition: transform 0.3s ease-in-out;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 40px 0 20px;
   text-align: center;
+  text-decoration: none; /* Ensure no underline */
+  border-bottom: none; /* Remove any border that might look like an underline */
+  color: #333; /* Optional: Set a color for the heading */
 }
 
-.achiever-card:hover {
-  transform: scale(1.1);
-}
-
-.achiever-image {
-  width: 240px; /* Slightly larger image */
-  height: 240px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-/* Infinite scrolling keyframes */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes animate-text-pop-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Adjusting the size of the student images */
-.achiever-image {
-  width: 150px; /* Increase the size */
-  height: 150px; /* Maintain a square aspect ratio */
-  object-fit: cover; /* Ensure the image doesn't stretch */
-  border-radius: 50%; /* Make the image circular */
-  border: 3px solid #1596ff; /* Add a border around the image */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.achiever-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-.achiever-card:hover {
-  transform: scale(1.05); /* Slightly enlarges the card on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling the achievers container */
+/* Achievers container and card styling remains the same */
 .achievers-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  justify-content: space-around;
+  gap: 20px; /* space between cards */
 }
 
+.achiever-card {
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* background for card */
+  transition: transform 0.3s ease-in-out;
+}
+
+.achiever-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the full card area */
+  transition: transform 0.3s ease-in-out;
+}
+
+.achiever-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.achiever-card:hover img {
+  transform: scale(1.1); /* Image zooms in a bit on hover */
+}
