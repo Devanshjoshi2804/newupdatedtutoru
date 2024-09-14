@@ -1496,17 +1496,7 @@ max-width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.achiever-info h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
 
-.achiever-info p {
-  font-size: 1.1rem;
-  color: #666;
-  font-weight: bold;
-}
 
 /* Infinite scrolling keyframes */
 @keyframes scroll-left {
