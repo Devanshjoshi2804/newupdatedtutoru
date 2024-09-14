@@ -1489,8 +1489,8 @@ max-width: 100%;
 }
 
 .achiever-image {
-  width: 140px; /* Slightly larger image */
-  height: 140px;
+  width: 240px; /* Slightly larger image */
+  height: 240px;
   border-radius: 50%;
   margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
