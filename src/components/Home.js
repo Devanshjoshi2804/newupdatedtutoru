@@ -256,7 +256,7 @@ function Home() {
       <img src={rohanImage} alt="Rohan Verma" className="achiever-image" />
       <div className="achiever-info">
         <h3>Seemant Gupta</h3>
-        <p>Class 10 CBSE - 92%</p>
+        <p>Class 12 CBSE - 92%</p>
       </div>
     </div>
 
