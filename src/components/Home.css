@@ -940,7 +940,7 @@ max-width: 100%;
   display: inline-block;
   color: #f9f9f9;
   white-space: nowrap;
-  animation: moveText 15s linear infinite;
+  animation: moveText 30s linear infinite;
 }
 
 .moving-text p {
