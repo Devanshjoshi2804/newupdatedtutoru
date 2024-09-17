@@ -175,47 +175,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Other Sections */}
-      <div className="getting-started-section">
-        <h2 className="section-title">Getting Started</h2>
-        <div className="steps-container">
-          <div className="step" data-step="1">
-            <div className="icon">
-              <i className="fas fa-file-alt"></i>
-            </div>
-            <h3>Fill Out the Form</h3>
-            <p>Complete our easy online form to get started.</p>
-          </div>
-          <div className="step" data-step="2">
-            <div className="icon">
-              <i className="fas fa-user-check"></i>
-            </div>
-            <h3>In-Person Assessment</h3>
-            <p>Our mentors visit to evaluate your child and discuss their progress.</p>
-          </div>
-          <div className="step" data-step="3">
-            <div className="icon">
-              <i className="fas fa-user-friends"></i>
-            </div>
-            <h3>Perfect Match</h3>
-            <p>We match your child with a tutor based on their specific needs and your preferences.</p>
-          </div>
-          <div className="step" data-step="4">
-            <div className="icon">
-              <i className="fas fa-chalkboard-teacher"></i>
-            </div>
-            <h3>Demo Session</h3>
-            <p>Experience a FREE trial session to ensure a good fit.</p>
-          </div>
-          <div className="step" data-step="5">
-            <div className="icon">
-              <i className="fas fa-book-open"></i>
-            </div>
-            <h3>Start Learning</h3>
-            <p>Begin regular sessions as soon as your child is comfortable with the tutor.</p>
-          </div>
-        </div>
-      </div>
+     
       {/* Top Achievers Section */}
 <div className="top-achievers-section">
   <h2 className="section-title">Scores in Subjects Taken with tutorU</h2>
@@ -327,15 +287,15 @@ function Home() {
         <div className="testimonials">
           <div className="testimonial hover:scale-105 transition-transform duration-300">
             <p>"tutorU has transformed my learning experience. My grades have improved significantly!"</p>
-            <span>- Student A</span>
+            <span>- Rahul</span>
           </div>
           <div className="testimonial hover:scale-105 transition-transform duration-300">
             <p>"The tutors are very knowledgeable and patient. My child loves the sessions!"</p>
-            <span>- Parent B</span>
+            <span>- Siddhi</span>
           </div>
           <div className="testimonial hover:scale-105 transition-transform duration-300">
             <p>"Highly recommend tutorU for anyone looking for quality home tutoring."</p>
-            <span>- Parent C</span>
+            <span>- Eshan</span>
           </div>
         </div>
       </div>
