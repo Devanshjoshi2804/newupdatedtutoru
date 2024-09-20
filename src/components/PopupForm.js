@@ -70,10 +70,13 @@ function PopupForm({ open, handleClose, selectedBoard, selectedGrade, selectedSu
 
   const handleSubmit = async () => {
     try {
+      // Trim and limit the grade to 10 characters
+      const trimmedGrade = selectedGrade.trim().slice(0, 10);
+
       const dataToSubmit = {
         ...formData,
         board: selectedBoard,
-        grade: selectedGrade,
+        grade: trimmedGrade,
         subject: selectedSubject,
       };
 
@@ -109,27 +112,15 @@ function PopupForm({ open, handleClose, selectedBoard, selectedGrade, selectedSu
       }
     } catch (error) {
       console.error('Error submitting form data:', error);
-      if (error.response) {
-        console.error('Error response data:', error.response.data);
-        console.error('Error response status:', error.response.status);
-        console.error('Error response headers:', error.response.headers);
-
-        let errorMessage = 'Failed to submit form data. ';
-        if (error.response.data && typeof error.response.data === 'object') {
-          Object.keys(error.response.data).forEach(key => {
-            errorMessage += `${key}: ${error.response.data[key].join(', ')}. `;
-          });
-        } else {
-          errorMessage += error.response.data || error.message;
-        }
-        alert(errorMessage);
-      } else if (error.request) {
-        console.error('Error request data:', error.request);
-        alert('No response received from server. Please check your internet connection and try again.');
+      let errorMessage = 'Failed to submit form data. ';
+      if (error.response && error.response.data) {
+        Object.keys(error.response.data).forEach(key => {
+          errorMessage += `${key}: ${error.response.data[key].join(', ')}. `;
+        });
       } else {
-        console.error('Error message:', error.message);
-        alert(`Error: ${error.message}`);
+        errorMessage += error.message;
       }
+      alert(errorMessage);
     }
   };
 
