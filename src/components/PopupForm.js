@@ -33,16 +33,16 @@ function PopupForm({ open, handleClose, selectedBoard, selectedGrade, selectedSu
 
       console.log('Submitting data:', dataToSubmit);
 
-      const csrfToken = Cookies.get('csrftoken');  // Fetch the CSRF token from cookies
+      const csrfToken = Cookies.get('csrftoken');
       console.log('CSRF Token:', csrfToken);
 
       const response = await axios.post(
-        'https://admin.tutoru.in/myapp/api/tutor-request/', // Ensure this URL is correct
+        'https://admin.tutoru.in/myapp/api/tutor-request/',
         dataToSubmit,
         {
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': csrfToken,  // Include the CSRF token in the headers
+            'X-CSRFToken': csrfToken,
           },
         }
       );
@@ -51,27 +51,36 @@ function PopupForm({ open, handleClose, selectedBoard, selectedGrade, selectedSu
 
       if (response.status === 201) {
         alert('Form submitted successfully!');
+        handleClose();
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+        });
       } else {
         console.error('Unexpected response:', response);
         alert('Unexpected response from server. Please try again later.');
       }
-
-      handleClose();
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-      });
     } catch (error) {
       console.error('Error submitting form data:', error);
       if (error.response) {
         console.error('Error response data:', error.response.data);
         console.error('Error response status:', error.response.status);
         console.error('Error response headers:', error.response.headers);
-        alert(`Error: ${error.response.data.message || 'Failed to submit form data. Please try again.'}`);
+
+        // More detailed error message
+        let errorMessage = 'Failed to submit form data. ';
+        if (error.response.data && typeof error.response.data === 'object') {
+          Object.keys(error.response.data).forEach(key => {
+            errorMessage += `${key}: ${error.response.data[key].join(', ')}. `;
+          });
+        } else {
+          errorMessage += error.response.data || error.message;
+        }
+        alert(errorMessage);
       } else if (error.request) {
         console.error('Error request data:', error.request);
-        alert('No response received from server. Please try again.');
+        alert('No response received from server. Please check your internet connection and try again.');
       } else {
         console.error('Error message:', error.message);
         alert(`Error: ${error.message}`);
