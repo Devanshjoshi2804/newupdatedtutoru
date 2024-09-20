@@ -2931,10 +2931,4 @@ max-width: 100%;
   transition: transform 0.3s ease-in-out;
 }
 
-.achiever-card:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
 
-.achiever-card:hover img {
-  transform: scale(1.1); /* Image zooms in a bit on hover */
-}
