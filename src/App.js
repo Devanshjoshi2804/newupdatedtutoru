@@ -1,7 +1,8 @@
 // src/App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import ReactGA from "react-ga4";
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
@@ -11,9 +12,15 @@ import FindTutor from './components/FindTutor'; // Import the FindTutor componen
 import Header from './components/Header';
 import './App.css';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +30,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/find-tutor" element={<FindTutor />} /> {/* Add the FindTutor route */}
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
