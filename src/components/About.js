@@ -4,22 +4,43 @@ import './About.css';
 
 function About() {
   return (
-    <div className="about">
-      <div className="about-header">
-        <h2>About Us</h2>
-      </div>
-      <img src={aboutUsImage} alt="About Us" className="about-image" />
-      <div className="about-content">
-        <div className="about-text">
-          <p>
-            Welcome to <strong>tutorU</strong>, where your academic success is our mission. We are passionate about helping students reach their highest potential through personalized tutoring services and a wealth of educational resources. Our team of experienced tutors is dedicated to delivering top-notch education, custom-tailored to each student's unique learning needs.
-          </p>
-          <p>
-            At <strong>tutorU</strong>, we foster a nurturing and engaging learning environment that inspires students to excel. Whether you're preparing for critical exams, striving to master challenging concepts, or honing your study skills, we are here to guide you every step of the way. Join us at <strong>tutorU</strong> and embark on a journey towards academic excellence and a brighter future.
-          </p>
+    <section className="about">
+      <div className="about-container">
+        <header className="about-header">
+          <h1>About Us</h1>
+          <div className="underline"></div>
+        </header>
+        
+        <div className="about-content">
+          <div className="about-image-container">
+            <img src={aboutUsImage} alt="About tutorU" className="about-image" />
+            <div className="image-overlay">
+              <span>Empowering Students</span>
+            </div>
+          </div>
+          
+          <div className="about-text-container">
+            <h2>Welcome to <span className="highlight">tutorU</span></h2>
+            <p>
+              At tutorU, we're passionate about helping students reach their highest potential. Our personalized tutoring services and wealth of educational resources are designed to guide you towards academic excellence.
+            </p>
+            <p>
+              Our team of experienced tutors is dedicated to delivering top-notch education, custom-tailored to each student's unique learning needs.
+            </p>
+            <ul className="about-features">
+              <li>Personalized Learning Plans</li>
+              <li>Expert Tutors Across Subjects</li>
+              <li>Flexible Scheduling</li>
+              <li>Proven Results</li>
+            </ul>
+            <p>
+              Whether you're preparing for critical exams, striving to master challenging concepts, or honing your study skills, we are here to support you every step of the way.
+            </p>
+            <button className="cta-button">Start Your Journey</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
