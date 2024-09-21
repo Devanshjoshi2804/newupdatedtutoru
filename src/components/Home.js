@@ -223,7 +223,7 @@ function Home() {
     </div>
 
     <div className="achiever-card">
-      <img src={nehaImage} alt="Neha Gupta" className="achiever-image" />
+      <img src={shrutiImage} alt="Shruti Singh" className="achiever-image" />
       <div className="achiever-info">
         {/* Achiever Info */}
       </div>
@@ -237,12 +237,12 @@ function Home() {
     </div>
 
     <div className="achiever-card">
-      <img src={shrutiImage} alt="Shruti Singh" className="achiever-image" />
+      <img src={nehaImage} alt="Neha Gupta" className="achiever-image" />
       <div className="achiever-info">
         {/* Achiever Info */}
       </div>
     </div>
-  </div>
+    </div>
 
   
 
