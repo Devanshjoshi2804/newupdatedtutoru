@@ -282,18 +282,18 @@ function Home() {
 
 
       {/* Testimonials Section */}
-      <div className="testimonials-section animate-testimonials-fade-in">
+      <div className="testimonials-section">
         <h2 className="section-title">Testimonials</h2>
         <div className="testimonials">
-          <div className="testimonial hover:scale-105 transition-transform duration-300">
+          <div className="testimonial">
             <p>"tutorU has transformed my learning experience. My grades have improved significantly!"</p>
             <span>- Rahul</span>
           </div>
-          <div className="testimonial hover:scale-105 transition-transform duration-300">
+          <div className="testimonial">
             <p>"The tutors are very knowledgeable and patient. My child loves the sessions!"</p>
             <span>- Siddhi</span>
           </div>
-          <div className="testimonial hover:scale-105 transition-transform duration-300">
+          <div className="testimonial">
             <p>"Highly recommend tutorU for anyone looking for quality home tutoring."</p>
             <span>- Eshan</span>
           </div>

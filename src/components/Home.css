@@ -774,30 +774,6 @@ max-width: 100%;
   overflow: hidden;
 }
 
-.testimonials-section::before,
-.testimonials-section::after {
-  /* Same floating blur animations as Core Benefits */
-  content: '';
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: rgba(21, 150, 255, 0.1);
-  border-radius: 50%;
-  z-index: -1;
-  animation: float 10s ease-in-out infinite;
-  filter: blur(40px);
-}
-
-.testimonials-section::before {
-  top: -150px;
-  right: -150px;
-}
-
-.testimonials-section::after {
-  bottom: -150px;
-  left: -150px;
-  animation-direction: reverse;
-}
 
 /* Rest of the styling remains unchanged */
 .testimonials-section h2 {
@@ -835,16 +811,12 @@ max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  transform: rotateY(15deg) translateZ(50px);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  
   position: relative;
   text-align: left;
 }
 
-.testimonial:hover {
-  transform: rotateY(0deg) translateZ(70px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-}
+
 
 .testimonial p {
   font-size: 1.2rem;
@@ -864,24 +836,7 @@ max-width: 100%;
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25px);
-  }
-}
 
-@media (max-width: 768px) {
-  .testimonial {
-    transform: rotateY(0deg) translateZ(30px);
-  }
-
-  .testimonials-section h2 {
-    font-size: 2.5rem;
-  }
-}
 
 /* Features Section */
 .features-section {
@@ -2222,30 +2177,9 @@ max-width: 100%;
   overflow: hidden;
 }
 
-.testimonials-section::before,
-.testimonials-section::after {
-  /* Same floating blur animations as Core Benefits */
-  content: '';
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: rgba(21, 150, 255, 0.1);
-  border-radius: 50%;
-  z-index: -1;
-  animation: float 10s ease-in-out infinite;
-  filter: blur(40px);
-}
 
-.testimonials-section::before {
-  top: -150px;
-  right: -150px;
-}
 
-.testimonials-section::after {
-  bottom: -150px;
-  left: -150px;
-  animation-direction: reverse;
-}
+
 
 /* Rest of the styling remains unchanged */
 .testimonials-section h2 {
@@ -2283,16 +2217,12 @@ max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  transform: rotateY(15deg) translateZ(50px);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  
   position: relative;
   text-align: left;
 }
 
-.testimonial:hover {
-  transform: rotateY(0deg) translateZ(70px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-}
+
 
 .testimonial p {
   font-size: 1.2rem;
@@ -2312,19 +2242,10 @@ max-width: 100%;
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25px);
-  }
-}
+
 
 @media (max-width: 768px) {
-  .testimonial {
-    transform: rotateY(0deg) translateZ(30px);
-  }
+  
 
   .testimonials-section h2 {
     font-size: 2.5rem;
@@ -2829,12 +2750,10 @@ max-width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 90%;
     text-align: center;
-    transition: transform 0.3s ease;
+    
   }
 
-  .testimonial:hover {
-    transform: scale(1.05);
-  }
+  
 
   .testimonial p {
     font-size: 0.9rem;
